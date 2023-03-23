@@ -11,6 +11,7 @@ function CurrentTemperature({ data }) {
 
   return (
     <div>
+      <img src="" alt="icon" />
       <h3>{data.name}</h3>
       <div className="temp">
         {data.main && (
