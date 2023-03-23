@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import SearchBar from "./components/SearchBar";
 import CurrentTemperature from "./components/CurrentTemperature";
-
+import NextHoursForecast from "./components/NextHoursForecast";
 
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
   return (
     <div className="App">
     {console.log(data.name)}
+    
     <SearchBar 
     location={location} 
     setLocation={setLocation}
@@ -21,10 +22,11 @@ function App() {
     setLat={setLat}
     setLon={setLon}
     />
-    <CurrentTemperature 
-    data={data}
-    lat={lat}
-    lon={lon}
+    <CurrentTemperature data={data}/>
+
+    <NextHoursForecast
+      lat={lat}
+      lon={lon}
     />
 
     </div>

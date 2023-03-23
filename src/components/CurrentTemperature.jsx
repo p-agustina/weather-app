@@ -19,7 +19,13 @@ function CurrentTemperature({ data }) {
       </div>
       <button onClick={handleConvert}>{convert ? "°C" : "°F"}</button>
       <div className="weather">
-        {data.weather ? <p>{data.weather[0].main}</p> : null}
+        {data.weather && (
+          <>
+            <p>{data.weather[0].main}</p>
+            <p>{data.main.humidity} %</p>
+            <p>{data.wind.speed} km/h </p>
+          </>
+        )}
       </div>
     </div>
   );
