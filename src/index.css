@@ -1,19 +1,17 @@
 body {
   margin: 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Roboto Mono', monospace, 'Montserrat', sans-serif;
+  color: #333333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background: rgb(34,193,195);
 background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
-background: rgb(163,205,223);
-background: linear-gradient(175deg, rgba(163,205,223,1) 0%, rgba(222,204,232,1) 51%, rgba(251,251,251,1) 86%);
+  background: rgb(163,205,223);
+  background: linear-gradient(175deg, rgba(163,205,223,1) 0%, rgba(222,204,232,1) 51%, rgba(251,251,251,1) 86%);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .App {
@@ -35,6 +33,16 @@ code {
   margin-top: 50px;
 }
 
+.currentLocation img {
+  height: 35px;
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
 .SearchBar input {
   border: none;
   padding: 10px 2px;
@@ -52,6 +60,13 @@ code {
   }
 }
 
+/* Big Icon */
+
+.BigIconImg {
+  height: 70px;
+  margin: 30px 0 0 20px;
+}
+
 /* CurrentTemp */
 
 .CurrentTemp {
@@ -59,17 +74,28 @@ code {
 }
 
 .CurrentTemp h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100 light;
+  margin-top: 0;
+ 
 }
 
 .CurrentTemp h1 {
   font-size: 3rem;
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800 bold;
 }
 
 .tempContainer {
   display: flex;
 } 
+
+.convertBtn {
+  display: flex;
+  align-items: center;
+}
 
 .convertBtn button {
   border: none; 
@@ -82,22 +108,43 @@ code {
 .windContainer {
   display: flex;
   width: 50%;
-  justify-content: space-around;
+  justify-content: start;
+}
+
+.windContainer div {
+  margin-right: 25px
+}
+
+.windContainer div p {
+  margin-top: 0
 }
 
 /* Forecast */
+
+.Title {
+  margin: 20px 0 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
 
 .ForecastContainer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  align-items: center
+  align-items: center;
+  /* margin-top: 50px; */
 }
 
 .ThreeHForecast {
   display: flex;
   flex-direction: column;
+}
 
+.ThreeHForecast div {
+  font-size: 0.8rem;
+  margin: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 

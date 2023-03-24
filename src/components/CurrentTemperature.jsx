@@ -1,4 +1,6 @@
 import { useState } from "react";
+import humidity from "../assets/icons/Humidity.png";
+import wind from "../assets/icons/Wind.png"
 
 function CurrentTemperature({ data }) {
   const [convert, setConvert] = useState(false);
@@ -19,8 +21,8 @@ function CurrentTemperature({ data }) {
 
   return (
     <div className="CurrentTemp">
-      <img src="" alt="icon" />
       <h3>{data.name}</h3>
+      {/* <h5 style={{margin: "0"}}>Last updated</h5> */}
       <div className="tempContainer">
       <div className="temp">
         {data.main && (
@@ -28,18 +30,19 @@ function CurrentTemperature({ data }) {
         )}
       </div>
       <div className="convertBtn">
-      <button onClick={handleCelsiusConvert} style={{color: !celsiusClicked ? "blue" : "black"}}>°C</button>
-      {/* <p>|</p> */}
-      <button onClick={handleFahrenConvert} style={{color: !fahrenClicked ? "blue" : "black"}}>°F</button>
+      <button onClick={handleCelsiusConvert} style={{color: !celsiusClicked ? "#80bfff" : "#333333"}}>°C</button>
+      <span style={{fontWeight: "bold"}}>|</span>
+      <button onClick={handleFahrenConvert} style={{color: !fahrenClicked ? "#80bfff" : "#333333"}}>°F</button>
       </div>
       </div>
       <div className="weather">
         {data.weather && (
           <>
-            <p>{data.weather[0].main}</p>
+          {/*  */}
+            <p style={{fontSize: "1.5rem"}}>{data.weather[0].main}</p>
             <div className="windContainer">
-            <p>{data.main.humidity} %</p>
-            <p>{data.wind.speed} km/h </p>
+            <div><img src={humidity} alt="humidity icon" /><span><p>{data.main.humidity} %</p></span></div>
+            <div><img src={wind} alt="wind icon" /><p>{data.wind.speed} km/h </p></div>
             </div>
           </>
         )}

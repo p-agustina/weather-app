@@ -27,10 +27,12 @@ function Forecast({ lat, lon }) {
                   <div className="ThreeHForecast" key={index}>
                     <div className="ForecastTime">{time}</div>
                     <div className="ForecastImg">
-                      <img src="" alt="icon" />
+                      {/* <img src="" alt="icon" /> */}
                     </div>
-                    <div className="ForecastTemp">min {minTemp} °C</div>
-                    <div className="ForecastTemp">max {maxTemp} °C</div>
+                    <div>
+                    <div className="ForecastTemp">min {minTemp}°C</div>
+                    <div className="ForecastTemp">max {maxTemp}°C</div>
+                  </div>
                   </div>
                 </div>
               );
