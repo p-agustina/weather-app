@@ -20,7 +20,7 @@ code {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  height: 95vh;
+  height: 95.5vh;
   background-color: rgba(255,255,255, 0.3);
   border-radius: 30px;
   box-shadow: 1px 1px 5px gray;
@@ -41,16 +41,49 @@ code {
   box-shadow: 1px 1px 5px lightgray;
 }
 
-.SearchBtn {
-  
+.searchBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #A180FF;
+  color: white;
+  :hover {
+    box-shadow: 1px 1px 5px white;
+  }
 }
 
+/* CurrentTemp */
 
+.CurrentTemp {
+  margin: 40px 0 0 20px;
+}
 
+.CurrentTemp h3 {
+  font-size: 1.5rem;
+}
 
+.CurrentTemp h1 {
+  font-size: 3rem;
+  margin: 0;
+}
 
+.tempContainer {
+  display: flex;
+} 
 
+.convertBtn button {
+  border: none; 
+  background: none;
+  font-weight: bold;
+  font-size:1.5rem;
+  margin:
+}
 
+.windContainer {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
 
 /* Forecast */
 
