@@ -62,7 +62,7 @@ form {
 
 /* Big Icon */
 
-.BigIconImg {
+.BigIcon {
   height: 70px;
   margin: 30px 0 0 20px;
 }
@@ -138,6 +138,7 @@ form {
 .ThreeHForecast {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .ThreeHForecast div {
