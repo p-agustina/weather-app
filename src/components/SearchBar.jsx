@@ -3,6 +3,7 @@ import GEO from "../assets/icons/current-location.svg"
 
 function SearchBar({ location, setLocation, setData, setLat, setLon }) {
   const APIkey = "c00aa935c957c316309d8af63cf49845"
+
   const getLatAndLon = (e) => {
     e.preventDefault();
 
@@ -34,7 +35,7 @@ function SearchBar({ location, setLocation, setData, setLat, setLon }) {
   return (
     <div className="SearchBar">
       <form onSubmit={getLatAndLon}>
-      <a className="currentLocation" href="" type="submit"><img src={GEO} alt=""/></a>
+      {/* <a className="currentLocation" href="" type="submit"><img src={GEO} alt=""/></a> */}
         <input
           type="text"
           placeholder="Enter location"

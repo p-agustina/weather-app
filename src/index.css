@@ -148,5 +148,11 @@ form {
   font-weight: bold;
 }
 
+/* ForecastIcon */
+
+.ForecastIcon {
+  width: 15vw;
+}
+
 
 
