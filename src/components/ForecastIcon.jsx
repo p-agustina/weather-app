@@ -5,15 +5,12 @@ import mist from "../assets/icons/50d.png";
 import snow from "../assets/icons/13d.png";
 
 function ForecastIcon({ forecastData, index }) {
-  console.log("ACAAAA", forecastData.list[0].weather[0].main);
-  console.log(index)
 
 if (!forecastData || !forecastData.list) {
     return null;
    }
    
     const weather = forecastData.list[index];
-    console.log("aca esta el weather", weather.weather[0].main)
 
         if (weather) {
             switch(weather.weather[0].main) {

@@ -9,7 +9,7 @@ function App() {
   const [data, setData] = useState({});
   const [lat, setLat] = useState("");
   const [lon, setLon] = useState("");
-
+  
   return (
     <div className="App">
       <div>
@@ -19,6 +19,8 @@ function App() {
           setData={setData}
           setLat={setLat}
           setLon={setLon}
+          lat={lat}
+          lon={lon}
         />
       </div>
 

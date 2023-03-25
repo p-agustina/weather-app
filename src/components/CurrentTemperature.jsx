@@ -8,7 +8,6 @@ function CurrentTemperature({ data }) {
   const [fahrenClicked, setFahrenClicked] = useState(false);
   const celsius = data.main && data.main.temp.toFixed();
   const fahrenheit = (celsius * 9) / 5 + 32;
-  console.log("esta es la data: ", data)
 
     const handleCelsiusConvert = (e) => {
         setCelsiusClicked(true);
@@ -39,7 +38,6 @@ function CurrentTemperature({ data }) {
       <div className="weather">
         {data.weather && (
           <>
-          {/*  */}
             <p style={{fontSize: "1.5rem"}}>{data.weather[0].main}</p>
             <div className="windContainer">
             <div><img src={humidity} alt="humidity icon" /><span><p>{data.main.humidity} %</p></span></div>

@@ -1,8 +1,8 @@
 import axios from "axios";
-import GEO from "../assets/icons/current-location.svg"
+import GeoLocation from "./GeoLocation";
 
-function SearchBar({ location, setLocation, setData, setLat, setLon }) {
-  const APIkey = "c00aa935c957c316309d8af63cf49845"
+function SearchBar({ location, setLocation, setData, setLat, setLon, lat, lon }) {
+  const APIkey = "c00aa935c957c316309d8af63cf49845";
 
   const getLatAndLon = (e) => {
     e.preventDefault();
@@ -34,13 +34,19 @@ function SearchBar({ location, setLocation, setData, setLat, setLon }) {
 
   return (
     <div className="SearchBar">
+      <GeoLocation 
+      setLat={setLat} 
+      setLon={setLon} 
+      lat={lat}
+      lon={lon}
+      APIkey={APIkey}
+      setData={setData}
+      />
       <form onSubmit={getLatAndLon}>
-      {/* <a className="currentLocation" href="" type="submit"><img src={GEO} alt=""/></a> */}
         <input
           type="text"
           placeholder="Enter location"
           onChange={(e) => setLocation(e.target.value)}
-          // onKeyPress={getLatAndLon}
           value={location}
         />
         <button type="submit" className="searchBtn">
