@@ -17,8 +17,8 @@ code {
 .App {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  height: 95.5vh;
+  margin: 1.2em;
+  height: 95.5vh; 
   background-color: rgba(255,255,255, 0.3);
   border-radius: 30px;
   box-shadow: 1px 1px 5px gray;
@@ -45,6 +45,7 @@ form {
 
 .SearchBar input {
   border: none;
+  width: 60%;
   padding: 10px 2px;
   box-shadow: 1px 1px 5px lightgray;
 }
@@ -74,14 +75,14 @@ form {
 /* Big Icon */
 
 .BigIcon {
-  height: 70px;
-  margin: 30px 0 0 20px;
+  height: 10vh;
+  margin: 2em 0 0 1.2em;
 }
 
 /* CurrentTemp */
 
 .CurrentTemp {
-  margin: 40px 0 0 20px;
+  margin: 15px 0 0 20px;
 }
 
 .CurrentTemp h3 {
@@ -89,6 +90,7 @@ form {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100 light;
   margin-top: 0;
+  margin-bottom: 0;
  
 }
 
@@ -116,9 +118,17 @@ form {
   margin:
 }
 
+.weatherConditions {
+  font-size: 1.5rem;
+}
+
+.weather p {
+  margin: 10px 0
+}
+
 .windContainer {
   display: flex;
-  width: 50%;
+  width: 60%;
   justify-content: start;
 }
 
@@ -128,6 +138,10 @@ form {
 
 .windContainer div p {
   margin-top: 0
+}
+
+.windContainer img {
+  width: 2em;
 }
 
 /* Forecast */
@@ -154,15 +168,116 @@ form {
 
 .ThreeHForecast div {
   font-size: 0.8rem;
-  margin: 15px 0;
+  margin: 5px 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+}
+
+#ForecastMinTemp, #ForecastMaxTemp {
+  margin: 5px 0;
 }
 
 /* ForecastIcon */
 
 .ForecastIcon {
-  width: 15vw;
+  height: 45px;
+}
+
+/* Tablets */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .App {
+    height: 97vh;
+  }
+
+  .SearchBar input {
+    width: 30vw;
+  }
+
+  .BigIcon {
+    height: 15vh;
+    margin: 3em 0 0 2em;
+  }
+
+  .CurrentTemp {
+    margin: 2em;
+  }
+
+  .CurrentTemp h3 {
+    font-size: 3rem;  
+  }
+  
+  .CurrentTemp h1 {
+    font-size: 5rem;
+  }
+
+  .convertBtn button {
+    font-size: 2rem;
+  }
+
+  .weather p {
+    font-size: 1.5rem;
+  }
+
+
+  #weatherConditions {
+    font-size: 2.5rem;
+  }
+
+  .windContainer {
+    width: 80%;
+  }
+
+  .windContainer img {
+    height: 70px;
+    width: 50px;
+  }
+
+  .windContainer div {
+    margin-right: 40px
+  }
+
+  .Title {
+    font-size: 1.5rem;
+  }
+  
+  .ThreeHForecast div {
+    font-size: 1.2rem; 
+  }
+
+  .generalContainer {
+    margin-left: 2em;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1025px) {
+  .App {
+    width: 60vw;
+    margin: 20px auto;
+  }
+
+  .BigIcon {
+    height: 10vh;
+    margin: 1em 0 0 1.2em;
+  }
+
+  .Forecast {
+    height: 20vh;
+  }
+
+  .ThreeHForecast {
+    height: 100%;
+  }
+
+  .generalContainer {
+    margin-left: 2em;
+  }
+
+  .ThreeHForecast div {
+    font-size: 0.7rem; 
+  }
 }
 
 

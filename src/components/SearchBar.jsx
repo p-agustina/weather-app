@@ -1,7 +1,15 @@
 import axios from "axios";
 import GeoLocation from "./GeoLocation";
 
-function SearchBar({ location, setLocation, setData, setLat, setLon, lat, lon }) {
+function SearchBar({
+  location,
+  setLocation,
+  setData,
+  setLat,
+  setLon,
+  lat,
+  lon,
+}) {
   const APIkey = "c00aa935c957c316309d8af63cf49845";
 
   const getLatAndLon = (e) => {
@@ -34,13 +42,13 @@ function SearchBar({ location, setLocation, setData, setLat, setLon, lat, lon })
 
   return (
     <div className="SearchBar">
-      <GeoLocation 
-      setLat={setLat} 
-      setLon={setLon} 
-      lat={lat}
-      lon={lon}
-      APIkey={APIkey}
-      setData={setData}
+      <GeoLocation
+        setLat={setLat}
+        setLon={setLon}
+        lat={lat}
+        lon={lon}
+        APIkey={APIkey}
+        setData={setData}
       />
       <form onSubmit={getLatAndLon}>
         <input

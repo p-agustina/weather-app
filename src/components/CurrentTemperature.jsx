@@ -1,9 +1,8 @@
 import { useState } from "react";
-import humidity from "../assets/icons/Humidity.png";
-import wind from "../assets/icons/Wind.png"
+import humidity from "../assets/icons/raindrops.svg";
+import wind from "../assets/icons/winds.svg"
 
 function CurrentTemperature({ data }) {
-  const [convert, setConvert] = useState(false);
   const [celsiusClicked, setCelsiusClicked] = useState(true);
   const [fahrenClicked, setFahrenClicked] = useState(false);
   const celsius = data.main && data.main.temp.toFixed();
@@ -38,7 +37,7 @@ function CurrentTemperature({ data }) {
       <div className="weather">
         {data.weather && (
           <>
-            <p style={{fontSize: "1.5rem"}}>{data.weather[0].main}</p>
+            <p id="weatherConditions">{data.weather[0].main}</p>
             <div className="windContainer">
             <div><img src={humidity} alt="humidity icon" /><span><p>{data.main.humidity} %</p></span></div>
             <div><img src={wind} alt="wind icon" /><p>{data.wind.speed} km/h </p></div>

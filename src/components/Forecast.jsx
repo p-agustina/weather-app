@@ -31,8 +31,8 @@ function Forecast({ lat, lon }) {
                      <ForecastIcon forecastData={forecastData} index={index}/>
                     </div>
                     <div>
-                    <div className="ForecastTemp">min {minTemp}°C</div>
-                    <div className="ForecastTemp">max {maxTemp}°C</div>
+                    <div id="ForecastMinTemp">min {minTemp}°C</div>
+                    <div id="ForecastMaxTemp">max {maxTemp}°C</div>
                   </div>
                   </div>
                 </div>

@@ -26,12 +26,14 @@ function App() {
 
       {lat && (
         <div>
+        <div className="generalContainer">
           <BigIcon data={data} />
           <div className="CurrentTemperature">
             <CurrentTemperature data={data} />
           </div>
           <div className="Title">
             <p> Forecast for the next hours</p>
+          </div>
           </div>
           <div className="Forecast">
             <Forecast lat={lat} lon={lon} />
