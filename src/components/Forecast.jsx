@@ -10,7 +10,8 @@ function Forecast({ lat, lon }) {
     axios.get(forecastUrl).then((response) => {
       setForecastData(response.data);
     });
-  }, [forecastUrl]);
+  }, [lat, lon]);
+  // cambiar por forecastUrl
 
   return (
     <div>
