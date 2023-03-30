@@ -1,5 +1,4 @@
 import clearD from "../assets/icons/01d.png";
-import clearN from "../assets/icons/01n.png";
 import rain from "../assets/icons/09d.png";
 import clouds from "../assets/icons/04d.png";
 import mist from "../assets/icons/50d.png";
