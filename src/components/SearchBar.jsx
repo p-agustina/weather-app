@@ -23,7 +23,7 @@ function SearchBar({
         const { lat, lon } = response.data[0];
         setLat(lat);
         setLon(lon);
-        const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
+        const weatherURL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
 
         axios
           .get(weatherURL)

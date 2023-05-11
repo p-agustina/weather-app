@@ -4,7 +4,7 @@ import ForecastIcon from "./ForecastIcon";
 
 function Forecast({ lat, lon }) {
   const [forecastData, setForecastData] = useState({});
-  const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c00aa935c957c316309d8af63cf49845&units=metric`;
+  const forecastUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=c00aa935c957c316309d8af63cf49845&units=metric`;
 
   useEffect(() => {
     axios.get(forecastUrl).then((response) => {

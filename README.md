@@ -36,3 +36,6 @@ To use this app, you need to have Node.js installed on your computer. Follow the
 ## Contributors
 This project was developed by Agustina Patt as a personal project. If you find any bugs or have suggestions for improvements, feel free to create an issue or submit a pull request.
 
+
+This project was bootstrapped with Create React App.
+

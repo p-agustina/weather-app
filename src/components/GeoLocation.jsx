@@ -2,7 +2,7 @@ import axios from "axios";
 import GEO from "../assets/icons/current-location.svg";
 
 function GeoLocation({ setLat, setLon, lat, lon, APIkey, setData }) {
-  const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
+  const URL = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
 
   const handleCoordinates = async (e) => {
     try {
