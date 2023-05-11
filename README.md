@@ -2,6 +2,8 @@
 
 This is a simple weather app developed with React, responsive web design, and the OpenWeatherMap public API. The app allows you to search for weather information of any city in the world and displays current weather conditions as well as the forecast for the selected city for the next 9 hours.
 
+You can checked the deployed version here: https://howstheweather-today.netlify.app/
+
 ## Features
 - Search for weather information of any city in the world.
 - Display current weather conditions including temperature, humidity, wind speed, and weather description.
