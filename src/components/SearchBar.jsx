@@ -15,28 +15,15 @@ function SearchBar({
   const getLatAndLon = (e) => {
     e.preventDefault();
 
-    // const geoURL = `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${APIkey}`;
     const geoURL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIkey}&units=metric`;
 
     axios
       .get(geoURL)
       .then((response) => {
         const { lat, lon } = response.data.coord;
-        console.log("this is the response", response);
         setLat(lat);
         setLon(lon);
         setData(response.data)
-        // const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}&units=metric`;
-
-        // axios
-        //   .get(weatherURL)
-        //   .then((response) => {
-        //     setData(response.data);
-        //     console.log("this is the response2", response);
-        //   })
-        //   .catch((error) => {
-        //     console.log(error);
-        //   });
       })
       .catch((error) => {
         console.log(error);

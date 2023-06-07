@@ -9,6 +9,7 @@ function BigIcon({data}) {
     return null;
    }
     const weather = data.weather;
+    console.log(weather)
 
         if (weather && weather.length > 0) {
             switch(weather[0].main) {
