@@ -11,7 +11,6 @@ function Forecast({ lat, lon }) {
       setForecastData(response.data);
     });
   }, [forecastUrl]);
-  // cambiar por forecastUrl
 
   return (
     <div>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import GeoLocation from "./GeoLocation";
+import env from "react-dotenv";
 
 function SearchBar({
   location,
@@ -10,7 +11,7 @@ function SearchBar({
   lat,
   lon,
 }) {
-  const APIkey = "c00aa935c957c316309d8af63cf49845";
+  const APIkey = env.REACT_APP_API_KEY;
 
   const getLatAndLon = (e) => {
     e.preventDefault();

@@ -12,7 +12,7 @@ function App() {
   
   return (
     <div className="App">
-      <div>
+      <div data-testid="searchbar-test">
         <SearchBar
           location={location}
           setLocation={setLocation}

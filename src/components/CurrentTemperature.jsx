@@ -6,7 +6,6 @@ function CurrentTemperature({ data }) {
   const [celsiusClicked, setCelsiusClicked] = useState(true);
   const [fahrenClicked, setFahrenClicked] = useState(false);
   const celsius = data.main && data.main.temp.toFixed();
-  console.log("here is the data.main", data.main)
   const fahrenheit = (celsius * 9) / 5 + 32;
 
     const handleCelsiusConvert = (e) => {
