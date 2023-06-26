@@ -1,5 +1,5 @@
-import axios from "axios";
 import GEO from "../assets/icons/current-location.svg";
+import getWeatherLatLon from "../api _calls/apiLatLon";
 
 function GeoLocation({ setLat, setLon, lat, lon, APIkey, setData }) {
   const handleClick = async () => {
@@ -13,10 +13,9 @@ function GeoLocation({ setLat, setLon, lat, lon, APIkey, setData }) {
       setLat(position.coords.latitude);
       setLon(position.coords.longitude);
 
-      const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${APIkey}&units=metric`;
 
-      const response = await axios.get(URL);
-      setData(response.data);
+      const data = await getWeatherLatLon(position.coords.latitude, position.coords.longitude)
+      setData(data);
     } catch (error) {
       console.log(error);
     }

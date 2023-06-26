@@ -1,6 +1,5 @@
-import axios from "axios";
 import GeoLocation from "./GeoLocation";
-import env from "react-dotenv";
+import getWeatherLocation from "../api _calls/apiLocation";
 
 function SearchBar({
   location,
@@ -11,20 +10,15 @@ function SearchBar({
   lat,
   lon,
 }) {
-  const APIkey = env.REACT_APP_API_KEY;
-
   const getLatAndLon = (e) => {
     e.preventDefault();
 
-    const geoURL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIkey}&units=metric`;
-
-    axios
-      .get(geoURL)
-      .then((response) => {
-        const { lat, lon } = response.data.coord;
+    getWeatherLocation(location)
+      .then((data) => {
+        const { lat, lon } = data.coord;
         setLat(lat);
         setLon(lon);
-        setData(response.data)
+        setData(data)
       })
       .catch((error) => {
         console.log(error);
@@ -39,7 +33,6 @@ function SearchBar({
         setLon={setLon}
         lat={lat}
         lon={lon}
-        APIkey={APIkey}
         setData={setData}
       />
       <form onSubmit={getLatAndLon}>
